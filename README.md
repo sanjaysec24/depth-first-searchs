@@ -55,8 +55,11 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 </ol></B>
 
 <hr>
-<h1> program </h1>
+
+## Program
+
 ```
+python
 from collections import defaultdict
 
 def dfs(graph, start, visited, path):
@@ -84,47 +87,48 @@ path = []
 
 print("Sample Output:")
 print(dfs(graph, start, visited, path))
-
 ```
 
-<h2>output</h2>
-<img width="697" height="207" alt="image" src="https://github.com/user-attachments/assets/321f0d8a-2db1-4380-bcb9-91245d0dc5ac" />
+## Output
+<img width="697" height="207" alt="image" src="https://github.com/user-attachments/assets/6f61ee2a-b14e-4c83-8648-19d2579cd54f" />
 
-<h3>Sample Input</h3>
-<hr>
-8 9 <BR>
-A B <BR>
-A C <BR>
-B E <BR>
-C D <BR>
-B D <BR>
-C G <BR>
-D F <BR>
-G F <BR>
-F H <BR>
-<hr>
-<h3>Sample Output</h3>
-<hr>
+
+### Sample Input 1
+
+```text
+8 9
+A B
+A C
+B E
+C D
+B D
+C G
+D F
+G F
+F H
+```
+
+### Sample Output 1
+
+```text
+Sample Output:
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
+```
 
-<hr>
+### Sample Input 2
 
-<hr>
-<h3>Sample Input</h3>
-<hr>
-5 5 <BR>
-0 1 <BR>
-0 2 <BR>
-0 3 <BR>
-2 3 <BR>
-2 4 <BR>
-<hr>
-<h3>Sample Output</h3>
-<hr>
+```text
+5 5
+0 1
+0 2
+0 3
+2 3
+2 4
+```
+
+### Sample Output 2
+
+```text
+Sample Output:
 ['0', '1', '2', '3', '4']
-
-<hr>
-<h3>Result:</h3>
-<hr>
-<p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
-
+```
