@@ -1,6 +1,6 @@
 <h1>ExpNo 2 : Implement Depth First Search Traversal of a Graph</h1> 
-<h3>Name: </h3>
-<h3>Register Number:     </h3>
+<h3>Name: SANJAYKUMAR B </h3>
+<h3>Register Number: 212224230242    </h3>
 <H3>Aim:</H3>
 <p> To Implement Depth First Search Traversal of a Graph using Python 3.</p>
 <h3>Theory:</h3>
@@ -55,6 +55,40 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 </ol></B>
 
 <hr>
+<h1> program </h1>
+```
+from collections import defaultdict
+
+def dfs(graph, start, visited, path):
+    path.append(start)
+    visited[start] = True
+
+    for neighbour in graph[start]:
+        if not visited[neighbour]:
+            dfs(graph, neighbour, visited, path)
+
+    return path
+
+graph = defaultdict(list)
+
+n, e = map(int, input().split())
+
+for i in range(e):
+    u, v = input().split()
+    graph[u].append(v)
+    graph[v].append(u)
+
+start = next(iter(graph))
+visited = defaultdict(bool)
+path = []
+
+print("Sample Output:")
+print(dfs(graph, start, visited, path))
+```
+
+<h2>output</h2>
+<img width="697" height="207" alt="image" src="https://github.com/user-attachments/assets/321f0d8a-2db1-4380-bcb9-91245d0dc5ac" />
+
 <h3>Sample Input</h3>
 <hr>
 8 9 <BR>
